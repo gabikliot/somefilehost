@@ -71,7 +71,7 @@ Global configuration:
        Num Virtual Buckets Consistent Ring: 30
    Providers:
        BootstrapProviders:
-           Name=InitializeTaskBootstrap, Type=Dotpay.SiloHost.InitializeTaskBootstrap, Properties=[]
+           Name=InitializeTaskBootstrap, Type=MyTest.SiloHost.InitializeTaskBootstrap, Properties=[]
 
        StorageProviders:
            Name=MemoryStore, Type=Orleans.Storage.MemoryStorage, Properties=[]
@@ -152,10 +152,10 @@ Silo configuration:
 [2015-02-12 03:36:59.416 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\DFramework.Plusins.Log4net.dll
 	* Assembly does not contain any acceptable grain types.
 	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
-[2015-02-12 03:36:59.460 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Actor.Interfaces.dll
+[2015-02-12 03:36:59.460 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\MyTest.Actor.Interfaces.dll
 	* Assembly does not contain any acceptable grain types.
 	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
-[2015-02-12 03:36:59.495 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Common.dll
+[2015-02-12 03:36:59.495 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\MyTest.Common.dll
 	* Assembly does not contain any acceptable grain types.
 	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
 [2015-02-12 03:36:59.553 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\log4net.dll
@@ -196,23 +196,23 @@ Silo configuration:
 	* Assembly does not contain any acceptable grain types.
 	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
 [2015-02-12 03:37:00.216 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Recursively searching for assemblies in D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications...	
-[2015-02-12 03:37:00.432 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\DFramework.dll
+[2015-02-12 03:37:00.432 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\MyTest.Actors.Implementations\DFramework.dll
 	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\DFramework.dll.	
-[2015-02-12 03:37:00.541 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Dotpay.Actor.Interfaces.dll
-	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Actor.Interfaces.dll.	
-[2015-02-12 03:37:00.663 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Dotpay.Common.dll
-	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Common.dll.	
-[2015-02-12 03:37:00.776 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Newtonsoft.Json.dll
+[2015-02-12 03:37:00.541 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\MyTest.Actors.Implementations\MyTest.Actor.Interfaces.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\MyTest.Actor.Interfaces.dll.	
+[2015-02-12 03:37:00.663 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\MyTest.Actors.Implementations\MyTest.Common.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\MyTest.Common.dll.	
+[2015-02-12 03:37:00.776 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\MyTest.Actors.Implementations\Newtonsoft.Json.dll
 	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Newtonsoft.Json.dll.	
-[2015-02-12 03:37:00.886 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\OATH.Net.dll
+[2015-02-12 03:37:00.886 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\MyTest.Actors.Implementations\OATH.Net.dll
 	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\OATH.Net.dll.	
-[2015-02-12 03:37:00.996 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Orleans.EventSourcing.dll
+[2015-02-12 03:37:00.996 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\MyTest.Actors.Implementations\Orleans.EventSourcing.dll
 	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.EventSourcing.dll.	
-[2015-02-12 03:37:01.108 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\RabbitMQ.Client.dll
+[2015-02-12 03:37:01.108 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\MyTest.Actors.Implementations\RabbitMQ.Client.dll
 	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\RabbitMQ.Client.dll.	
-[2015-02-12 03:37:01.218 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\Dotpay.Common.dll
-	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Common.dll.	
-[2015-02-12 03:37:01.260 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\Dotpay.Domain.Interfaces.dll
+[2015-02-12 03:37:01.218 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\MyTest.Common.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\MyTest.Common.dll.	
+[2015-02-12 03:37:01.260 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\MyTest.Domain.Interfaces.dll
 	* Assembly does not contain any acceptable grain types.
 	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
 [2015-02-12 03:37:01.374 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\Newtonsoft.Json.dll
@@ -235,26 +235,26 @@ Silo configuration:
 	* Assembly filename is excluded.	
 [2015-02-12 03:37:02.159 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.Storage.Couchbase.dll...	
 [2015-02-12 03:37:02.227 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\OrleansProviders.dll...	
-[2015-02-12 03:37:02.279 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Dotpay.Actors.Implementations.dll...	
+[2015-02-12 03:37:02.279 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\MyTest.Actors.Implementations\MyTest.Actors.Implementations.dll...	
 [2015-02-12 03:37:02.422 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\Implementations.dll...	
 [2015-02-12 03:37:02.501 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Orleans.EventSourcing.SimpleGrain\Orleans.EventSourcing.SimpleGrain.dll...	
 [2015-02-12 03:37:02.566 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	5 assemblies loaded.	
 [2015-02-12 03:37:02.778 GMT     9	INFO   	101711	AssemblyLoader.Silo	127.0.0.1:11111]	Loaded grain type summary for 15 types: 
-Grain class AtomicIncrement [-698712525 (0xD65A7E33)] from Dotpay.Actors.Implementations.dll implementing interfaces: Dotpay.Actor.Interfaces.IAtomicIncrement [-130975188 (0xF8317A2C)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class AtomicIncrement [-698712525 (0xD65A7E33)] from MyTest.Actors.Implementations.dll implementing interfaces: MyTest.Actor.Interfaces.IAtomicIncrement [-130975188 (0xF8317A2C)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
 Grain class BankAccount [-245400725 (0xF15F7B6B)] from Orleans.EventSourcing.SimpleGrain.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IBankAcountState> [493642223 (0x1D6C61EF)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Orleans.EventSourcing.SimpleInterface.IBankAccount [-912346303 (0xC99EB341)], Orleans.IGrainWithGuidKey [-1097320095 (0xBE983961)]
 Grain class GrainBasedMembershipTable [-2103923544 (0x8298ACA8)] from OrleansRuntime.dll implementing interfaces: Orleans.IMembershipTable [-112743698 (0xF947AAEE)]
 Grain class GrainBasedReminderTable [-55315191 (0xFCB3F509)] from OrleansRuntime.dll implementing interfaces: Orleans.IReminderTable [596859315 (0x239359B3)]
 Grain class ManagementGrain [1954798034 (0x7483D9D2)] from OrleansRuntime.dll implementing interfaces: Orleans.Runtime.IManagementGrain [-1734666656 (0x989B1660)]
 Grain class MemoryStorageGrain [-448291344 (0xE5479DF0)] from OrleansProviders.dll implementing interfaces: Orleans.Storage.IMemoryStorageGrain [577125491 (0x22663C73)]
 Grain class PubSubRendezvousGrain [1903070868 (0x716E8E94)] from OrleansRuntime.dll implementing interfaces: Orleans.Streams.IPubSubRendezvousGrain [1746702088 (0x681C8F08)]
-Grain class RippleQuoteService [-829088797 (0xCE951BE3)] from Dotpay.Actors.Implementations.dll implementing interfaces: Dotpay.Actor.Service.Interfaces.IRippleQuoteService [2133055338 (0x7F23D76A)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)]
-Grain class RippleToFinancialInstitution [1381525452 (0x525867CC)] from Dotpay.Actors.Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IRippleToFinancialInstitutionState> [1812336140 (0x6C060E0C)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Dotpay.Actor.Interfaces.Ripple.IRippleToFinancialInstitution [1793292731 (0x6AE379BB)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)]
-Grain class RippleToFinancialInstitutionListener [-1790337728 (0x95499D40)] from Dotpay.Actors.Implementations.dll implementing interfaces: Dotpay.Actor.Interfaces.Ripple.IRippleToFinancialInstitutionListener [661328755 (0x276B1373)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)], Orleans.IRemindable [-831689659 (0xCE6D6C45)]
-Grain class SystemSetting [2045864656 (0x79F16AD0)] from Dotpay.Actors.Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<ISystemSettingState> [-599560889 (0xDC436D47)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Dotpay.Actor.Interfaces.ISystemSetting [468577895 (0x1BEDEE67)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)]
+Grain class RippleQuoteService [-829088797 (0xCE951BE3)] from MyTest.Actors.Implementations.dll implementing interfaces: MyTest.Actor.Service.Interfaces.IRippleQuoteService [2133055338 (0x7F23D76A)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)]
+Grain class RippleToFinancialInstitution [1381525452 (0x525867CC)] from MyTest.Actors.Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IRippleToFinancialInstitutionState> [1812336140 (0x6C060E0C)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], MyTest.Actor.Interfaces.IRippleToFinancialInstitution [1793292731 (0x6AE379BB)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)]
+Grain class RippleToFinancialInstitutionListener [-1790337728 (0x95499D40)] from MyTest.Actors.Implementations.dll implementing interfaces: MyTest.Actor.Interfaces.IRippleToFinancialInstitutionListener [661328755 (0x276B1373)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)], Orleans.IRemindable [-831689659 (0xCE6D6C45)]
+Grain class SystemSetting [2045864656 (0x79F16AD0)] from MyTest.Actors.Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<ISystemSettingState> [-599560889 (0xDC436D47)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], MyTest.Actor.Interfaces.ISystemSetting [468577895 (0x1BEDEE67)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)]
 Grain class TransferTransaction [-1675570505 (0x9C20D2B7)] from Orleans.EventSourcing.SimpleGrain.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<ITransferTransactionState> [-2034877687 (0x86B63B09)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Orleans.EventSourcing.SimpleInterface.ITransferTransaction [1895808213 (0x70FFBCD5)], Orleans.IGrainWithGuidKey [-1097320095 (0xBE983961)]
 Grain class TransferTransactionProcessManager [1689916162 (0x64BA1302)] from Orleans.EventSourcing.SimpleGrain.dll implementing interfaces: Orleans.EventSourcing.SimpleInterface.ITransferTransactionProcessManager [2060187244 (0x7ACBF66C)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)], Orleans.IRemindable [-831689659 (0xCE6D6C45)]
-Grain class User [-504462008 (0xE1EE8548)] from Dotpay.Actors.Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IUserState> [1191603731 (0x47066E13)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Dotpay.Actor.Interfaces.IUser [1071184334 (0x3FD8F9CE)], Orleans.IGrainWithGuidKey [-1097320095 (0xBE983961)]
-Grain class User [804035741 (0x2FEC9C9D)] from Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IUserState> [-154997395 (0xF6C2ED6D)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Dotpay.Domain.Interfaces.IUser [-872191074 (0xCC036B9E)]
+Grain class User [-504462008 (0xE1EE8548)] from MyTest.Actors.Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IUserState> [1191603731 (0x47066E13)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], MyTest.Actor.Interfaces.IUser [1071184334 (0x3FD8F9CE)], Orleans.IGrainWithGuidKey [-1097320095 (0xBE983961)]
+Grain class User [804035741 (0x2FEC9C9D)] from Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IUserState> [-154997395 (0xF6C2ED6D)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], MyTest.Domain.Interfaces.IUser [-872191074 (0xCC036B9E)]
 	
 [2015-02-12 03:37:03.795 GMT    19	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/8	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/8 on managed thread 19	
 [2015-02-12 03:37:03.795 GMT    21	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/10	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/10 on managed thread 21	
@@ -303,10 +303,10 @@ Grain class User [804035741 (0x2FEC9C9D)] from Implementations.dll implementing 
 [2015-02-12 03:37:09.357 GMT    24	INFO   	102925	ReminderService	127.0.0.1:11111]	Starting reminder system target on: S127.0.0.1:11111:161408215 xBB9C2D6E, with range <MultiRange: Size=x100000000, %Ring=100.000%>	
 [2015-02-12 03:37:09.491 GMT    16	INFO   	100000	GrainBasedReminderTable_S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@5d8d418b	127.0.0.1:11111]	GrainBasedReminderTable *grn/FCB3F509/00003039 Activated. Full identity: [ActivationAddress: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@5d8d418b, Full GrainId: [GrainId: *grn/FCB3F509/0000000000000000000000000000303903fffffffcb3f509-0xBB9ED002, IdCategory: Grain, BaseTypeCode: -55315191 (xFCB3F509), PrimaryKey: 12345 (x3039), UniformHashCode: 3147747330 (0xBB9ED002)], Full ActivationId: @4d9cbaba34899a2c4541df205d8d418b0000000000000000]	
 [2015-02-12 03:37:09.676 GMT    22	INFO   	102926	ReminderService	127.0.0.1:11111]	Reminder system target started OK on: S127.0.0.1:11111:161408215 xBB9C2D6E, with range <MultiRange: Size=x100000000, %Ring=100.000%>	
-[2015-02-12 03:37:09.758 GMT    24	INFO   	103102	ProviderLoader/IBootstrapProvider	127.0.0.1:11111]	Loaded provider of type Dotpay.SiloHost.InitializeTaskBootstrap Name=InitializeTaskBootstrap	
+[2015-02-12 03:37:09.758 GMT    24	INFO   	103102	ProviderLoader/IBootstrapProvider	127.0.0.1:11111]	Loaded provider of type MyTest.SiloHost.InitializeTaskBootstrap Name=InitializeTaskBootstrap	
 [2015-02-12 03:37:09.805 GMT    24	INFO   	100437	BootstrapProviderManager	127.0.0.1:11111]	Calling Init for IBootstrapProvider classes	
 [2015-02-12 03:37:12.219 GMT    24	WARNING	101215	Scheduler.ProviderManagerSystemTarget.WorkItemGroup	127.0.0.1:11111]	Task [Id=3, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215ProviderManagerSystemTarget@S00000013] took elapsed time 0:00:02.4855417 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread.System/13, ManagedThreadId=24, Executing Task Id=3 Status=RanToCompletion for 00:00:02.4861422>	
-[2015-02-12 03:37:13.961 GMT    19	WARNING	101215	Scheduler.WorkItemGroup	127.0.0.1:11111]	Task [Id=4, Status=RanToCompletion] in WorkGroup [Activation: S127.0.0.1:11111:161408215*grn/95499D40/00000000@d0817187 #GrainType=Dotpay.Actors.Implementations.RippleToFinancialInstitutionListener State=Valid] took elapsed time 0:00:01.6726957 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread/8, ManagedThreadId=19, Executing Task Id=4 Status=RanToCompletion for 00:00:01.6750958>	
+[2015-02-12 03:37:13.961 GMT    19	WARNING	101215	Scheduler.WorkItemGroup	127.0.0.1:11111]	Task [Id=4, Status=RanToCompletion] in WorkGroup [Activation: S127.0.0.1:11111:161408215*grn/95499D40/00000000@d0817187 #GrainType=MyTest.Actors.ImplementationsToFinancialInstitutionListener State=Valid] took elapsed time 0:00:01.6726957 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread/8, ManagedThreadId=19, Executing Task Id=4 Status=RanToCompletion for 00:00:01.6750958>	
 [2015-02-12 03:37:14.029 GMT    28	INFO   	100000	Runtime.Messaging.GatewayAcceptor/1	127.0.0.1:11111]	Starting AsyncAgent Runtime.Messaging.GatewayAcceptor/1 on managed thread 28	
 [2015-02-12 03:37:14.190 GMT     9	INFO   	100294	SystemStatus	127.0.0.1:11111]	SystemStatus=Running	
 [2015-02-12 03:37:14.194 GMT    28	INFO   	100328	Runtime.Messaging.GatewayAcceptor/1	127.0.0.1:11111]	Stopping AsyncAgent Runtime.Messaging.GatewayAcceptor/1 that runs on managed thread 28	
@@ -415,13 +415,13 @@ Dispatcher.NewPlacement.Current=32
 Gateway.ConnectedClients.Current=0
 Gateway.LoadShedding.Current=0
 Gateway.Received.Current=0
-Grain.Dotpay.Actor.Implementations.AtomicIncrement.Current=0
-Grain.Dotpay.Actor.Implementations.RippleToFinancialInstitution.Current=0
-Grain.Dotpay.Actor.Implementations.SystemSetting.Current=0
-Grain.Dotpay.Actor.Implementations.User.Current=0
-Grain.Dotpay.Actor.Service.Implementations.RippleQuoteService.Current=0
-Grain.Dotpay.Actors.Implementations.RippleToFinancialInstitutionListener.Current=1
-Grain.Dotpay.Domain.Implementations.User.Current=0
+Grain.MyTest.Actor.Implementations.AtomicIncrement.Current=0
+Grain.MyTest.Actor.ImplementationsToFinancialInstitution.Current=0
+Grain.MyTest.Actor.Implementations.SystemSetting.Current=0
+Grain.MyTest.Actor.Implementations.User.Current=0
+Grain.MyTest.Actor.Service.ImplementationsQuoteService.Current=0
+Grain.MyTest.Actors.ImplementationsToFinancialInstitutionListener.Current=1
+Grain.MyTest.Domain.Implementations.User.Current=0
 Grain.Orleans.EventSourcing.SimpleGrain.BankAccount.Current=0
 Grain.Orleans.EventSourcing.SimpleGrain.TransferTransaction.Current=0
 Grain.Orleans.EventSourcing.SimpleGrain.TransferTransactionProcessManager.Current=0
