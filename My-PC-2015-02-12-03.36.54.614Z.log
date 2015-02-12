@@ -1,0 +1,554 @@
+﻿[2015-02-12 03:36:54.969 GMT     9	INFO   	100403	OrleansSiloHost	]	Initializing Silo my-PC on host=my-PC CPU count=12 running .NET version='4.0.30319.18444' Is .NET 4.5=True OS version='Microsoft Windows NT 6.1.7601 Service Pack 1'	
+[2015-02-12 03:36:54.983 GMT     9	INFO   	100404	OrleansSiloHost	]	Silo running with GC settings: ServerGC=True GCLatencyMode=Batch	
+[2015-02-12 03:36:55.661 GMT     9	INFO   	100403	Silo	127.0.0.1:11111]	-------------- Initializing Primary silo on my-PC at 127.0.0.1:11111, gen 161408215 --------------	
+[2015-02-12 03:36:55.706 GMT     9	INFO   	100415	Silo	127.0.0.1:11111]	Starting silo my-PC with runtime Version='1.0.0.0 IsRelease.' Config= 
+Config File Name: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\DevTestServerConfiguration.xml
+Host: my-PC
+Start time: 2015-02-12 03:36:55.671 GMT
+Primary node: 127.0.0.1:11111
+Platform version info:
+   .NET version: 4.0.30319.18444
+   Is .NET 4.5=True
+   OS version: Microsoft Windows NT 6.1.7601 Service Pack 1
+   GC Type=Server GCLatencyMode=Batch
+Global configuration:
+   System Ids:
+      ServiceId: 00000000-0000-0000-0000-000000000000
+      DeploymentId: my
+   Subnet: 
+   Seed nodes: 127.0.0.1:11111
+   Messaging:
+       Response timeout: 00:30:00
+       Maximum resend count: 0
+       Resend On Timeout: False
+       Maximum Socket Age: 10675199.02:48:05.4775807
+       Drop Expired Messages: True
+       Silo Sender queues: 12
+       Gateway Sender queues: 12
+       Use standard (.NET) serializer: False
+       Buffer Pool Buffer Size: 4096
+       Buffer Pool Max Size: 10000
+       Buffer Pool Preallocation Size: 250
+       Use Message Batching: False
+       Max Message Batching Size: 10
+       Maximum forward count: 2
+   Liveness:
+      LivenessEnabled: True
+      LivenessType: MembershipTableGrain
+      ProbeTimeout: 00:00:10
+      TableRefreshTimeout: 00:01:00
+      DeathVoteExpirationTimeout: 00:02:00
+      NumMissedProbesLimit: 3
+      NumProbedSilos: 3
+      NumVotesForDeathDeclaration: 2
+      UseLivenessGossip: True
+      IAmAliveTablePublishTimeout: 00:05:00
+      NumMissedTableIAmAliveLimit: 2
+      MaxJoinAttemptTime: 00:05:00
+      ExpectedClusterSize: 20
+   SystemStore:
+      ConnectionString: null
+   Application:
+      Defaults:
+         Deactivate if idle for: 00:02:00
+
+   PlacementStrategy: 
+         Default Placement Strategy: RandomPlacement
+         Deployment Load Publisher Refresh Time: 00:00:01
+         Activation CountBased Placement Choose Out Of: 2
+   Grain directory cache:
+      Maximum size: 1000000 grains
+      Initial TTL: 00:00:30
+      Maximum TTL: 00:04:00
+      TTL extension factor: 2.00
+      Directory Caching Strategy: Adaptive
+   Grain directory:
+      Lazy deregistration delay: 00:01:00
+   Reminder Service:
+       ReminderServiceType: ReminderTableGrain
+   Consistent Ring:
+       Use Virtual Buckets Consistent Ring: True
+       Num Virtual Buckets Consistent Ring: 30
+   Providers:
+       BootstrapProviders:
+           Name=InitializeTaskBootstrap, Type=Dotpay.SiloHost.InitializeTaskBootstrap, Properties=[]
+
+       StorageProviders:
+           Name=MemoryStore, Type=Orleans.Storage.MemoryStorage, Properties=[]
+
+Silo configuration:
+   Silo Name: my-PC
+   Generation: 161408215
+   Host Name or IP Address: localhost
+   DNS Host Name: my-PC
+   Port: 11111
+   Subnet: 
+   Preferred Address Family: InterNetwork
+   Proxy Gateway: 127.0.0.1:30000
+   IsPrimaryNode: True
+   Scheduler: 
+         Max Active Threads: 12
+         Processor Count: 12
+         Delay Warning Threshold: 00:00:10
+         Activation Scheduling Quantum: 00:00:00.1000000
+         Turn Warning Length Threshold: 00:00:00.2000000
+         Inject More Worker Threads: False
+         MinDotNetThreadPoolSize: 200
+         .NET thread pool sizes - Min: Worker Threads=12 Completion Port Threads=12
+         .NET thread pool sizes - Max: Worker Threads=32767 Completion Port Threads=1000
+         .NET ServicePointManager - DefaultConnectionLimit=200 Expect100Continue=False UseNagleAlgorithm=False
+   Load Shedding Enabled: False
+   Load Shedding Limit: 95
+   Debug: 
+   Tracing: 
+     Default Trace Level: Info
+     TraceLevelOverrides:
+         Application ==> Info
+     Trace to Console: True
+     Trace File Name: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\my-PC-2015-02-12-03.36.54.614Z.log
+     Write Messaging Traces: False
+     LargeMessageWarningThreshold: 85000
+     PropagateActivityId: False
+     BulkMessageLimit: 5
+   Statistics: 
+     MetricsTableWriteInterval: 00:00:30
+     PerfCounterWriteInterval: 00:00:30
+     LogWriteInterval: 00:05:00
+     WriteLogStatisticsToTable: True
+     StatisticsCollectionLevel: Info
+
+	
+[2015-02-12 03:36:58.057 GMT     9	INFO   	100000	Scheduler.OrleansTaskScheduler	127.0.0.1:11111]	Starting OrleansTaskScheduler with 12 Max Active application Threads and 1 system thread.	
+[2015-02-12 03:36:58.192 GMT     9	INFO   	101010	Runtime.Messaging.IncomingMessageAcceptor/1	127.0.0.1:11111]	Opened a listening socket at address 127.0.0.1:11111	
+[2015-02-12 03:36:58.248 GMT     9	INFO   	101010	Runtime.Messaging.GatewayAcceptor/1	127.0.0.1:11111]	Opened a listening socket at address 127.0.0.1:30000	
+[2015-02-12 03:36:58.377 GMT     9	INFO   	100000	VirtualBucketsRingProvider	127.0.0.1:11111]	Starting VirtualBucketsRingProvider on silo S127.0.0.1:11111:161408215/xBB9C2D6E.	
+[2015-02-12 03:36:58.583 GMT     9	INFO   	103003	VirtualBucketsRingProvider	127.0.0.1:11111]	Added Server S127.0.0.1:11111:161408215/xBB9C2D6E. Current view: [S127.0.0.1:11111:161408215 -> <MultiRange: Size=x100000000, %Ring=100.000%>]	
+[2015-02-12 03:36:58.620 GMT     9	INFO   	103005	VirtualBucketsRingProvider	127.0.0.1:11111]	-NotifyLocalRangeSubscribers about old <(0 0], Size=x100000000, %Ring=100.000%> new <MultiRange: Size=x100000000, %Ring=100.000%> increased? True	
+[2015-02-12 03:36:58.717 GMT     9	INFO   	100294	SystemStatus	127.0.0.1:11111]	SystemStatus=Created	
+[2015-02-12 03:36:58.744 GMT     9	INFO   	100422	Silo	127.0.0.1:11111]	-------------- Started silo S127.0.0.1:11111:161408215, ConsistentHashCode BB9C2D6E --------------	
+[2015-02-12 03:36:58.790 GMT     9	INFO   	100294	SystemStatus	127.0.0.1:11111]	SystemStatus=Starting	
+[2015-02-12 03:36:58.816 GMT     9	INFO   	100401	Silo	127.0.0.1:11111]	Silo Start()	
+[2015-02-12 03:36:58.846 GMT     9	INFO   	100430	Silo	127.0.0.1:11111]	Configured ThreadPool.SetMinThreads() to values: 200,200. Previous values are: 12,12.	
+[2015-02-12 03:36:58.881 GMT     9	INFO   	100436	Silo	127.0.0.1:11111]	Configured .NET ServicePointManager to Expect100Continue=False, DefaultConnectionLimit=200, UseNagleAlgorithm=False to improve Azure storage performance.	
+[2015-02-12 03:36:59.025 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Searching for assemblies in D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo...	
+[2015-02-12 03:36:59.108 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Autofac.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.146 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Common.Logging.Core.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.196 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Common.Logging.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.278 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Couchbase.NetClient.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.343 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\DFramework.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.380 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\DFramework.Plusins.Autofac.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.416 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\DFramework.Plusins.Log4net.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.460 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Actor.Interfaces.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.495 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Common.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.553 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\log4net.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.591 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Microsoft.WindowsAzure.Configuration.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.647 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Microsoft.WindowsAzure.ServiceRuntime.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.733 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Microsoft.WindowsAzure.StorageClient.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.811 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Newtonsoft.Json.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.850 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\OATH.Net.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.888 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.dll
+	* Assembly filename is excluded.	
+[2015-02-12 03:36:59.930 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.EventSourcing.Couchbase.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:36:59.975 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.EventSourcing.dll
+	* Grain type Orleans.EventSourcing.EventSourcingGrain`2 is abstract and cannot be instantiated.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:37:00.020 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.EventSourcing.SimpleInterface.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:37:00.065 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\OrleansAzureUtils.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:37:00.118 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\OrleansRuntime.dll
+	* Assembly filename is excluded.	
+[2015-02-12 03:37:00.178 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\RabbitMQ.Client.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:37:00.216 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Recursively searching for assemblies in D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications...	
+[2015-02-12 03:37:00.432 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\DFramework.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\DFramework.dll.	
+[2015-02-12 03:37:00.541 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Dotpay.Actor.Interfaces.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Actor.Interfaces.dll.	
+[2015-02-12 03:37:00.663 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Dotpay.Common.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Common.dll.	
+[2015-02-12 03:37:00.776 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Newtonsoft.Json.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Newtonsoft.Json.dll.	
+[2015-02-12 03:37:00.886 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\OATH.Net.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\OATH.Net.dll.	
+[2015-02-12 03:37:00.996 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Orleans.EventSourcing.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.EventSourcing.dll.	
+[2015-02-12 03:37:01.108 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\RabbitMQ.Client.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\RabbitMQ.Client.dll.	
+[2015-02-12 03:37:01.218 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\Dotpay.Common.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Dotpay.Common.dll.	
+[2015-02-12 03:37:01.260 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\Dotpay.Domain.Interfaces.dll
+	* Assembly does not contain any acceptable grain types.
+	* Assembly contains no types assignable from Orleans.Providers.IProvider.	
+[2015-02-12 03:37:01.374 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\Newtonsoft.Json.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Newtonsoft.Json.dll.	
+[2015-02-12 03:37:01.483 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\OATH.Net.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\OATH.Net.dll.	
+[2015-02-12 03:37:01.595 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\Orleans.EventSourcing.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.EventSourcing.dll.	
+[2015-02-12 03:37:01.703 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Orleans.EventSourcing.SimpleGrain\Microsoft.WindowsAzure.StorageClient.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Microsoft.WindowsAzure.StorageClient.dll.	
+[2015-02-12 03:37:01.815 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Orleans.EventSourcing.SimpleGrain\Newtonsoft.Json.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Newtonsoft.Json.dll.	
+[2015-02-12 03:37:01.853 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Orleans.EventSourcing.SimpleGrain\Orleans.dll
+	* Assembly filename is excluded.	
+[2015-02-12 03:37:01.966 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Orleans.EventSourcing.SimpleGrain\Orleans.EventSourcing.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.EventSourcing.dll.	
+[2015-02-12 03:37:02.086 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Orleans.EventSourcing.SimpleGrain\Orleans.EventSourcing.SimpleInterface.dll
+	* A conflicting assembly has already been loaded from D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.EventSourcing.SimpleInterface.dll.	
+[2015-02-12 03:37:02.123 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	User assembly ignored: D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Orleans.EventSourcing.SimpleGrain\OrleansRuntime.dll
+	* Assembly filename is excluded.	
+[2015-02-12 03:37:02.159 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Orleans.Storage.Couchbase.dll...	
+[2015-02-12 03:37:02.227 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\OrleansProviders.dll...	
+[2015-02-12 03:37:02.279 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Dotpay.Actors.Implementations\Dotpay.Actors.Implementations.dll...	
+[2015-02-12 03:37:02.422 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Implementations\Implementations.dll...	
+[2015-02-12 03:37:02.501 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	Loading assembly D:\Microsoft Project Orleans SDK v1.0\SDK\LocalSilo\Applications\Orleans.EventSourcing.SimpleGrain\Orleans.EventSourcing.SimpleGrain.dll...	
+[2015-02-12 03:37:02.566 GMT     9	INFO   	100000	AssemblyLoader.Silo	127.0.0.1:11111]	5 assemblies loaded.	
+[2015-02-12 03:37:02.778 GMT     9	INFO   	101711	AssemblyLoader.Silo	127.0.0.1:11111]	Loaded grain type summary for 15 types: 
+Grain class AtomicIncrement [-698712525 (0xD65A7E33)] from Dotpay.Actors.Implementations.dll implementing interfaces: Dotpay.Actor.Interfaces.IAtomicIncrement [-130975188 (0xF8317A2C)], Orleans.IGrainWithStringKey [-1277021679 (0xB3E23211)]
+Grain class BankAccount [-245400725 (0xF15F7B6B)] from Orleans.EventSourcing.SimpleGrain.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IBankAcountState> [493642223 (0x1D6C61EF)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Orleans.EventSourcing.SimpleInterface.IBankAccount [-912346303 (0xC99EB341)], Orleans.IGrainWithGuidKey [-1097320095 (0xBE983961)]
+Grain class GrainBasedMembershipTable [-2103923544 (0x8298ACA8)] from OrleansRuntime.dll implementing interfaces: Orleans.IMembershipTable [-112743698 (0xF947AAEE)]
+Grain class GrainBasedReminderTable [-55315191 (0xFCB3F509)] from OrleansRuntime.dll implementing interfaces: Orleans.IReminderTable [596859315 (0x239359B3)]
+Grain class ManagementGrain [1954798034 (0x7483D9D2)] from OrleansRuntime.dll implementing interfaces: Orleans.Runtime.IManagementGrain [-1734666656 (0x989B1660)]
+Grain class MemoryStorageGrain [-448291344 (0xE5479DF0)] from OrleansProviders.dll implementing interfaces: Orleans.Storage.IMemoryStorageGrain [577125491 (0x22663C73)]
+Grain class PubSubRendezvousGrain [1903070868 (0x716E8E94)] from OrleansRuntime.dll implementing interfaces: Orleans.Streams.IPubSubRendezvousGrain [1746702088 (0x681C8F08)]
+Grain class RippleQuoteService [-829088797 (0xCE951BE3)] from Dotpay.Actors.Implementations.dll implementing interfaces: Dotpay.Actor.Service.Interfaces.IRippleQuoteService [2133055338 (0x7F23D76A)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)]
+Grain class RippleToFinancialInstitution [1381525452 (0x525867CC)] from Dotpay.Actors.Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IRippleToFinancialInstitutionState> [1812336140 (0x6C060E0C)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Dotpay.Actor.Interfaces.Ripple.IRippleToFinancialInstitution [1793292731 (0x6AE379BB)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)]
+Grain class RippleToFinancialInstitutionListener [-1790337728 (0x95499D40)] from Dotpay.Actors.Implementations.dll implementing interfaces: Dotpay.Actor.Interfaces.Ripple.IRippleToFinancialInstitutionListener [661328755 (0x276B1373)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)], Orleans.IRemindable [-831689659 (0xCE6D6C45)]
+Grain class SystemSetting [2045864656 (0x79F16AD0)] from Dotpay.Actors.Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<ISystemSettingState> [-599560889 (0xDC436D47)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Dotpay.Actor.Interfaces.ISystemSetting [468577895 (0x1BEDEE67)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)]
+Grain class TransferTransaction [-1675570505 (0x9C20D2B7)] from Orleans.EventSourcing.SimpleGrain.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<ITransferTransactionState> [-2034877687 (0x86B63B09)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Orleans.EventSourcing.SimpleInterface.ITransferTransaction [1895808213 (0x70FFBCD5)], Orleans.IGrainWithGuidKey [-1097320095 (0xBE983961)]
+Grain class TransferTransactionProcessManager [1689916162 (0x64BA1302)] from Orleans.EventSourcing.SimpleGrain.dll implementing interfaces: Orleans.EventSourcing.SimpleInterface.ITransferTransactionProcessManager [2060187244 (0x7ACBF66C)], Orleans.IGrainWithIntegerKey [1928988877 (0x72FA08CD)], Orleans.IRemindable [-831689659 (0xCE6D6C45)]
+Grain class User [-504462008 (0xE1EE8548)] from Dotpay.Actors.Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IUserState> [1191603731 (0x47066E13)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Dotpay.Actor.Interfaces.IUser [1071184334 (0x3FD8F9CE)], Orleans.IGrainWithGuidKey [-1097320095 (0xBE983961)]
+Grain class User [804035741 (0x2FEC9C9D)] from Implementations.dll implementing interfaces: Orleans.EventSourcing.IEventSourcingGrain<IUserState> [-154997395 (0xF6C2ED6D)], Orleans.EventSourcing.IEventSourcingGrain [683934852 (0x28C40484)], Dotpay.Domain.Interfaces.IUser [-872191074 (0xCC036B9E)]
+	
+[2015-02-12 03:37:03.795 GMT    19	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/8	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/8 on managed thread 19	
+[2015-02-12 03:37:03.795 GMT    21	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/10	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/10 on managed thread 21	
+[2015-02-12 03:37:03.795 GMT    26	INFO   	100000	Runtime.Messaging.SiloMessageSender.PingSender/1	127.0.0.1:11111]	Starting AsyncAgent Runtime.Messaging.SiloMessageSender.PingSender/1 on managed thread 26	
+[2015-02-12 03:37:03.796 GMT    14	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/3	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/3 on managed thread 14	
+[2015-02-12 03:37:03.851 GMT    30	INFO   	100000	Runtime.GrainDirectory.AdaptiveDirectoryCacheMaintainer`1/1	127.0.0.1:11111]	Starting AsyncAgent Runtime.GrainDirectory.AdaptiveDirectoryCacheMaintainer`1/1 on managed thread 30	
+[2015-02-12 03:37:03.851 GMT    25	INFO   	100000	Runtime.Messaging.IncomingMessageAcceptor/1	127.0.0.1:11111]	Starting AsyncAgent Runtime.Messaging.IncomingMessageAcceptor/1 on managed thread 25	
+[2015-02-12 03:37:03.851 GMT     3	INFO   	100000	Runtime.Messaging.IncomingMessageAgent.System/1	127.0.0.1:11111]	Starting AsyncAgent Runtime.Messaging.IncomingMessageAgent.System/1 on managed thread 3	
+[2015-02-12 03:37:03.858 GMT    32	INFO   	100000	Runtime.Messaging.IncomingMessageAgent.Application/3	127.0.0.1:11111]	Starting AsyncAgent Runtime.Messaging.IncomingMessageAgent.Application/3 on managed thread 32	
+[2015-02-12 03:37:03.882 GMT    27	INFO   	100000	Runtime.Messaging.SiloMessageSender.SystemSender/2	127.0.0.1:11111]	Starting AsyncAgent Runtime.Messaging.SiloMessageSender.SystemSender/2 on managed thread 27	
+[2015-02-12 03:37:03.884 GMT    16	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/5	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/5 on managed thread 16	
+[2015-02-12 03:37:03.887 GMT    15	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/4	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/4 on managed thread 15	
+[2015-02-12 03:37:03.887 GMT    13	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/2	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/2 on managed thread 13	
+[2015-02-12 03:37:03.930 GMT    20	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/9	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/9 on managed thread 20	
+[2015-02-12 03:37:03.930 GMT    23	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/12	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/12 on managed thread 23	
+[2015-02-12 03:37:03.976 GMT    17	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/6	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/6 on managed thread 17	
+[2015-02-12 03:37:04.004 GMT    31	INFO   	100000	Runtime.Messaging.IncomingMessageAgent.Ping/2	127.0.0.1:11111]	Starting AsyncAgent Runtime.Messaging.IncomingMessageAgent.Ping/2 on managed thread 31	
+[2015-02-12 03:37:04.004 GMT    18	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/7	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/7 on managed thread 18	
+[2015-02-12 03:37:04.011 GMT    12	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/1	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/1 on managed thread 12	
+[2015-02-12 03:37:04.012 GMT    22	INFO   	100000	Runtime.Scheduler.WorkerPoolThread/11	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread/11 on managed thread 22	
+[2015-02-12 03:37:04.011 GMT     9	INFO   	100000	MembershipFactory	127.0.0.1:11111]	Creating membership oracle for type=MembershipTableGrain	
+[2015-02-12 03:37:04.035 GMT    25	INFO   	100328	Runtime.Messaging.IncomingMessageAcceptor/1	127.0.0.1:11111]	Stopping AsyncAgent Runtime.Messaging.IncomingMessageAcceptor/1 that runs on managed thread 25	
+[2015-02-12 03:37:04.036 GMT    24	INFO   	100000	Runtime.Scheduler.WorkerPoolThread.System/13	127.0.0.1:11111]	Starting AsyncAgent Runtime.Scheduler.WorkerPoolThread.System/13 on managed thread 24	
+[2015-02-12 03:37:04.128 GMT     9	INFO   	100000	ReminderFactory	127.0.0.1:11111]	Creating reminder system target for type=ReminderTableGrain	
+[2015-02-12 03:37:04.341 GMT    24	INFO   	100635	MembershipFactory	127.0.0.1:11111]	Creating membership table provider for type=MembershipTableGrain	
+[2015-02-12 03:37:04.502 GMT    22	INFO   	100637	GrainBasedMembershipTable	127.0.0.1:11111]	GrainBasedMembershipTable Activated.	
+[2015-02-12 03:37:04.563 GMT    24	WARNING	101215	Scheduler.Catalog.WorkItemGroup	127.0.0.1:11111]	Task [Id=1, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215Catalog@S0000000e] took elapsed time 0:00:00.2484718 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread.System/13, ManagedThreadId=24, Executing Task Id=1 Status=RanToCompletion for 00:00:00.2540146>	
+[2015-02-12 03:37:04.649 GMT    12	INFO   	100507	Catalog	127.0.0.1:11111]	Before collection#1: memory=14MB, #activations=1, collector=<#Activations=0, #Buckets=0, buckets=[]>.	
+[2015-02-12 03:37:04.704 GMT    12	INFO   	100508	Catalog	127.0.0.1:11111]	After collection#1: memory=14MB, #activations=1, collected 0 activations, collector=<#Activations=0, #Buckets=0, buckets=[]>, collection time=00:00:00.0745397.	
+[2015-02-12 03:37:04.799 GMT    24	INFO   	103102	ProviderLoader/IStorageProvider	127.0.0.1:11111]	Loaded provider of type Orleans.Storage.MemoryStorage Name=MemoryStore	
+[2015-02-12 03:37:04.878 GMT    24	INFO   	0	Storage.MemoryStorage.1	127.0.0.1:11111]	Init: Name=MemoryStore NumStorageGrains=10	
+[2015-02-12 03:37:04.951 GMT    24	INFO   	100603	MembershipOracle	127.0.0.1:11111]	MembershipOracle starting on host = my-PC address = S127.0.0.1:11111:161408215 at 2015-02-12 03:37:04.059 GMT, backOffMax = 00:00:20	
+[2015-02-12 03:37:08.053 GMT    19	WARNING	101215	Scheduler.MembershipOracle.WorkItemGroup	127.0.0.1:11111]	Task [Id=2, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215MembershipOracle@S0000000f] took elapsed time 0:00:00.2180735 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread/8, ManagedThreadId=19, Executing Task Id=2 Status=RanToCompletion for 00:00:00.2180125>	
+[2015-02-12 03:37:08.196 GMT    12	INFO   	100652	MembershipOracle	127.0.0.1:11111]	-CleanupTable called on silo startup. Membership table 0 silos, 0 are Active, 0 are Dead: []. Version=<0, 0>	
+[2015-02-12 03:37:08.427 GMT    24	INFO   	100660	MembershipOracle	127.0.0.1:11111]	Starting IAmAliveUpdateTimer.	
+[2015-02-12 03:37:08.510 GMT    13	INFO   	100604	MembershipOracle	127.0.0.1:11111]	-BecomeActive	
+[2015-02-12 03:37:08.580 GMT    13	INFO   	100614	MembershipOracle	127.0.0.1:11111]	About to send pings to 0 nodes in order to validate communication in the Joining state. Pinged nodes = []	
+[2015-02-12 03:37:08.672 GMT    24	INFO   	100634	MembershipOracle	127.0.0.1:11111]	-ReadAll (called from BecomeActive) Membership table 1 silos, 1 are Active, 0 are Dead: [SiloAddress=S127.0.0.1:11111:161408215 Status=Active]. Version=<2, 5>	
+[2015-02-12 03:37:08.731 GMT    24	INFO   	100605	MembershipOracle	127.0.0.1:11111]	-Finished BecomeActive.	
+[2015-02-12 03:37:08.772 GMT     9	INFO   	100702	WindowsPerfCountersStatistics	127.0.0.1:11111]	Starting Windows perf counter stats collection with frequency=00:00:30	
+[2015-02-12 03:37:08.958 GMT     9	INFO   	100714	SiloPerformanceMetrics	127.0.0.1:11111]	Starting Silo Table metrics reporter with reportFrequency=00:00:30	
+[2015-02-12 03:37:09.009 GMT    24	INFO   	100000	DeploymentLoadPublisher	127.0.0.1:11111]	Starting DeploymentLoadPublisher.	
+[2015-02-12 03:37:09.209 GMT    24	INFO   	100000	DeploymentLoadPublisher	127.0.0.1:11111]	Started DeploymentLoadPublisher.	
+[2015-02-12 03:37:09.247 GMT     9	INFO   	100000	Watchdog	127.0.0.1:11111]	Starting Silo Watchdog.	
+[2015-02-12 03:37:09.308 GMT    36	INFO   	100000	Runtime.Watchdog/1	127.0.0.1:11111]	Starting AsyncAgent Runtime.Watchdog/1 on managed thread 36	
+[2015-02-12 03:37:09.357 GMT    24	INFO   	102925	ReminderService	127.0.0.1:11111]	Starting reminder system target on: S127.0.0.1:11111:161408215 xBB9C2D6E, with range <MultiRange: Size=x100000000, %Ring=100.000%>	
+[2015-02-12 03:37:09.491 GMT    16	INFO   	100000	GrainBasedReminderTable_S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@5d8d418b	127.0.0.1:11111]	GrainBasedReminderTable *grn/FCB3F509/00003039 Activated. Full identity: [ActivationAddress: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@5d8d418b, Full GrainId: [GrainId: *grn/FCB3F509/0000000000000000000000000000303903fffffffcb3f509-0xBB9ED002, IdCategory: Grain, BaseTypeCode: -55315191 (xFCB3F509), PrimaryKey: 12345 (x3039), UniformHashCode: 3147747330 (0xBB9ED002)], Full ActivationId: @4d9cbaba34899a2c4541df205d8d418b0000000000000000]	
+[2015-02-12 03:37:09.676 GMT    22	INFO   	102926	ReminderService	127.0.0.1:11111]	Reminder system target started OK on: S127.0.0.1:11111:161408215 xBB9C2D6E, with range <MultiRange: Size=x100000000, %Ring=100.000%>	
+[2015-02-12 03:37:09.758 GMT    24	INFO   	103102	ProviderLoader/IBootstrapProvider	127.0.0.1:11111]	Loaded provider of type Dotpay.SiloHost.InitializeTaskBootstrap Name=InitializeTaskBootstrap	
+[2015-02-12 03:37:09.805 GMT    24	INFO   	100437	BootstrapProviderManager	127.0.0.1:11111]	Calling Init for IBootstrapProvider classes	
+[2015-02-12 03:37:12.219 GMT    24	WARNING	101215	Scheduler.ProviderManagerSystemTarget.WorkItemGroup	127.0.0.1:11111]	Task [Id=3, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215ProviderManagerSystemTarget@S00000013] took elapsed time 0:00:02.4855417 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread.System/13, ManagedThreadId=24, Executing Task Id=3 Status=RanToCompletion for 00:00:02.4861422>	
+[2015-02-12 03:37:13.961 GMT    19	WARNING	101215	Scheduler.WorkItemGroup	127.0.0.1:11111]	Task [Id=4, Status=RanToCompletion] in WorkGroup [Activation: S127.0.0.1:11111:161408215*grn/95499D40/00000000@d0817187 #GrainType=Dotpay.Actors.Implementations.RippleToFinancialInstitutionListener State=Valid] took elapsed time 0:00:01.6726957 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread/8, ManagedThreadId=19, Executing Task Id=4 Status=RanToCompletion for 00:00:01.6750958>	
+[2015-02-12 03:37:14.029 GMT    28	INFO   	100000	Runtime.Messaging.GatewayAcceptor/1	127.0.0.1:11111]	Starting AsyncAgent Runtime.Messaging.GatewayAcceptor/1 on managed thread 28	
+[2015-02-12 03:37:14.190 GMT     9	INFO   	100294	SystemStatus	127.0.0.1:11111]	SystemStatus=Running	
+[2015-02-12 03:37:14.194 GMT    28	INFO   	100328	Runtime.Messaging.GatewayAcceptor/1	127.0.0.1:11111]	Stopping AsyncAgent Runtime.Messaging.GatewayAcceptor/1 that runs on managed thread 28	
+[2015-02-12 03:37:14.264 GMT    29	INFO   	100000	Runtime.Messaging.GatewayClientCleanupAgent/1	127.0.0.1:11111]	Starting AsyncAgent Runtime.Messaging.GatewayClientCleanupAgent/1 on managed thread 29	
+[2015-02-12 03:37:14.269 GMT     9	INFO   	100424	OrleansSiloHost	127.0.0.1:11111]	Silo startup event name: my-PC	
+[2015-02-12 03:37:14.316 GMT     9	INFO   	100425	OrleansSiloHost	127.0.0.1:11111]	Created and set startup event my-PC	
+[2015-02-12 03:37:14.364 GMT     9	INFO   	100402	OrleansSiloHost	127.0.0.1:11111]	Silo my-PC started successfully	
+[2015-02-12 03:37:14.414 GMT    17	WARNING	101215	Scheduler.ReminderService.WorkItemGroup	127.0.0.1:11111]	Task [Id=5, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215ReminderService@S00000010] took elapsed time 0:00:00.4654791 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread/6, ManagedThreadId=17, Executing Task Id=5 Status=RanToCompletion for 00:00:00.4650266>	
+[2015-02-12 03:37:15.092 GMT    13	INFO   	0	RippleToFinancialInstitutionListener	]	11:37-->I'm alive.	
+[2015-02-12 03:38:04.790 GMT    24	INFO   	100507	Catalog	127.0.0.1:11111]	Before collection#2: memory=51MB, #activations=3, collector=<#Activations=2, #Buckets=1, buckets=[0h:1m:55s.271ms->2 items]>.	
+[2015-02-12 03:38:04.844 GMT    24	INFO   	100508	Catalog	127.0.0.1:11111]	After collection#2: memory=51MB, #activations=3, collected 0 activations, collector=<#Activations=2, #Buckets=1, buckets=[0h:1m:55s.208ms->2 items]>, collection time=00:00:00.0623388.	
+[2015-02-12 03:38:20.169 GMT    16	INFO   	0	RippleToFinancialInstitutionListener	]	11:38-->I'm alive.	
+[2015-02-12 03:39:04.906 GMT    24	INFO   	100507	Catalog	127.0.0.1:11111]	Before collection#3: memory=68MB, #activations=3, collector=<#Activations=2, #Buckets=2, buckets=[0h:0m:55s.147ms->1 items, 0h:1m:55s.147ms->1 items]>.	
+[2015-02-12 03:39:04.963 GMT    24	INFO   	100508	Catalog	127.0.0.1:11111]	After collection#3: memory=68MB, #activations=3, collected 0 activations, collector=<#Activations=2, #Buckets=2, buckets=[0h:0m:55s.92ms->1 items, 0h:1m:55s.92ms->1 items]>, collection time=00:00:00.0549980.	
+[2015-02-12 03:39:25.236 GMT    12	INFO   	0	RippleToFinancialInstitutionListener	]	11:39-->I'm alive.	
+[2015-02-12 03:40:05.049 GMT    24	INFO   	100507	Catalog	127.0.0.1:11111]	Before collection#4: memory=85MB, #activations=3, collector=<#Activations=2, #Buckets=3, buckets=[0h:0m:-4s.-973ms->1 items, 0h:0m:55s.26ms->0 items, 0h:1m:55s.26ms->1 items]>.	
+[2015-02-12 03:40:05.633 GMT    24	INFO   	100509	Catalog	127.0.0.1:11111]	ShutdownActivationCollector: total 1 to promptly Destroy.	
+[2015-02-12 03:40:05.715 GMT    24	INFO   	100503	Catalog	127.0.0.1:11111]	Starting DestroyActivations #0 of 1 activations	
+[2015-02-12 03:40:05.843 GMT    24	WARNING	101215	Scheduler.Catalog.WorkItemGroup	127.0.0.1:11111]	Task [Id=6, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215Catalog@S0000000e] took elapsed time 0:00:00.7577982 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread.System/13, ManagedThreadId=24, Executing Task Id=6 Status=RanToCompletion for 00:00:00.7570433>	
+[2015-02-12 03:40:05.847 GMT    12	INFO   	100000	GrainBasedReminderTable_S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@5d8d418b	127.0.0.1:11111]	GrainBasedReminderTable *grn/FCB3F509/00003039 OnDeactivateAsync. Full identity: [ActivationAddress: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@5d8d418b, Full GrainId: [GrainId: *grn/FCB3F509/0000000000000000000000000000303903fffffffcb3f509-0xBB9ED002, IdCategory: Grain, BaseTypeCode: -55315191 (xFCB3F509), PrimaryKey: 12345 (x3039), UniformHashCode: 3147747330 (0xBB9ED002)], Full ActivationId: @4d9cbaba34899a2c4541df205d8d418b0000000000000000]	
+[2015-02-12 03:40:05.941 GMT    24	INFO   	100539	Catalog	127.0.0.1:11111]	Done DestroyActivations #0 - Destroyed 1 Activations.	
+[2015-02-12 03:40:06.001 GMT    24	INFO   	100508	Catalog	127.0.0.1:11111]	After collection#4: memory=85MB, #activations=2, collected 1 activations, collector=<#Activations=1, #Buckets=2, buckets=[0h:0m:54s.58ms->0 items, 0h:1m:54s.58ms->1 items]>, collection time=00:00:00.9683688.	
+[2015-02-12 03:40:30.305 GMT    13	INFO   	0	RippleToFinancialInstitutionListener	]	11:40-->I'm alive.	
+[2015-02-12 03:41:06.075 GMT    24	INFO   	100507	Catalog	127.0.0.1:11111]	Before collection#5: memory=102MB, #activations=2, collector=<#Activations=1, #Buckets=3, buckets=[0h:0m:-6s.-18ms->0 items, 0h:0m:53s.981ms->0 items, 0h:1m:53s.981ms->1 items]>.	
+[2015-02-12 03:41:06.130 GMT    24	INFO   	100508	Catalog	127.0.0.1:11111]	After collection#5: memory=102MB, #activations=2, collected 0 activations, collector=<#Activations=1, #Buckets=2, buckets=[0h:0m:53s.923ms->0 items, 0h:1m:53s.923ms->1 items]>, collection time=00:00:00.0579721.	
+[2015-02-12 03:41:07.620 GMT    22	INFO   	100520	Catalog	127.0.0.1:11111]	Tried to create a duplicate activation S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@e0467897, but we'll use S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@136e8892 instead. GrainInstanceType is Orleans.Runtime.ReminderService.GrainBasedReminderTable. Primary Directory partition for this grain is S127.0.0.1:11111:161408215, full activation address is [ActivationAddress: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@e0467897, Full GrainId: [GrainId: *grn/FCB3F509/0000000000000000000000000000303903fffffffcb3f509-0xBB9ED002, IdCategory: Grain, BaseTypeCode: -55315191 (xFCB3F509), PrimaryKey: 12345 (x3039), UniformHashCode: 3147747330 (0xBB9ED002)], Full ActivationId: @4b241e69e2cae5c35ff95edde04678970000000000000000]. We have 1 messages to forward.	
+[2015-02-12 03:41:08.119 GMT    21	INFO   	100520	Catalog	127.0.0.1:11111]	Tried to create a duplicate activation S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@7f8fb2a1, but we'll use S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@136e8892 instead. GrainInstanceType is Orleans.Runtime.ReminderService.GrainBasedReminderTable. Primary Directory partition for this grain is S127.0.0.1:11111:161408215, full activation address is [ActivationAddress: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@7f8fb2a1, Full GrainId: [GrainId: *grn/FCB3F509/0000000000000000000000000000303903fffffffcb3f509-0xBB9ED002, IdCategory: Grain, BaseTypeCode: -55315191 (xFCB3F509), PrimaryKey: 12345 (x3039), UniformHashCode: 3147747330 (0xBB9ED002)], Full ActivationId: @4c6421ccc740d7339ea3ecab7f8fb2a10000000000000000]. We have 1 messages to forward.	
+[2015-02-12 03:41:09.357 GMT    19	WARNING	101215	Scheduler.DeploymentLoadPublisherSystemTarge.WorkItemGroup	127.0.0.1:11111]	Task [Id=7, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215DeploymentLoadPublisherSystemTarge@S00000016] took elapsed time 0:00:00.5565399 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread/8, ManagedThreadId=19, Executing Task Id=7 Status=RanToCompletion for 00:00:00.5570318>	
+[2015-02-12 03:41:09.357 GMT    23	INFO   	100520	Catalog	127.0.0.1:11111]	Tried to create a duplicate activation S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@323bacb2, but we'll use S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@136e8892 instead. GrainInstanceType is Orleans.Runtime.ReminderService.GrainBasedReminderTable. Primary Directory partition for this grain is S127.0.0.1:11111:161408215, full activation address is [ActivationAddress: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@323bacb2, Full GrainId: [GrainId: *grn/FCB3F509/0000000000000000000000000000303903fffffffcb3f509-0xBB9ED002, IdCategory: Grain, BaseTypeCode: -55315191 (xFCB3F509), PrimaryKey: 12345 (x3039), UniformHashCode: 3147747330 (0xBB9ED002)], Full ActivationId: @4c79dc3e302815ed0016c382323bacb20000000000000000]. We have 1 messages to forward.	
+[2015-02-12 03:41:09.698 GMT    22	INFO   	101033	Dispatcher	127.0.0.1:11111]	Forwarding 1 requests to old address S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@e0467897 after Duplicate activation.	
+[2015-02-12 03:41:10.033 GMT    21	INFO   	101033	Dispatcher	127.0.0.1:11111]	Forwarding 1 requests to old address S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@7f8fb2a1 after Duplicate activation.	
+[2015-02-12 03:41:10.033 GMT    24	INFO   	101033	Dispatcher	127.0.0.1:11111]	Forwarding 1 requests to old address S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@2bbbfd8e after Duplicate activation.	
+[2015-02-12 03:41:10.033 GMT    16	INFO   	100520	Catalog	127.0.0.1:11111]	Tried to create a duplicate activation S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@1cb6ba87, but we'll use S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@136e8892 instead. GrainInstanceType is Orleans.Runtime.ReminderService.GrainBasedReminderTable. Primary Directory partition for this grain is S127.0.0.1:11111:161408215, full activation address is [ActivationAddress: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@1cb6ba87, Full GrainId: [GrainId: *grn/FCB3F509/0000000000000000000000000000303903fffffffcb3f509-0xBB9ED002, IdCategory: Grain, BaseTypeCode: -55315191 (xFCB3F509), PrimaryKey: 12345 (x3039), UniformHashCode: 3147747330 (0xBB9ED002)], Full ActivationId: @4c9ec7f335fd946b0801d2fc1cb6ba870000000000000000]. We have 1 messages to forward.	
+[2015-02-12 03:41:10.354 GMT    17	INFO   	101033	Dispatcher	127.0.0.1:11111]	Forwarding 1 requests to old address S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@f45b8eb8 after Duplicate activation.	
+[2015-02-12 03:41:10.745 GMT    15	INFO   	101033	Dispatcher	127.0.0.1:11111]	Forwarding 1 requests to old address S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@ff0f7190 after Duplicate activation.	
+[2015-02-12 03:41:10.745 GMT    12	INFO   	100520	Catalog	127.0.0.1:11111]	Tried to create a duplicate activation S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@1958608c, but we'll use S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@136e8892 instead. GrainInstanceType is Orleans.Runtime.ReminderService.GrainBasedReminderTable. Primary Directory partition for this grain is S127.0.0.1:11111:161408215, full activation address is [ActivationAddress: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@1958608c, Full GrainId: [GrainId: *grn/FCB3F509/0000000000000000000000000000303903fffffffcb3f509-0xBB9ED002, IdCategory: Grain, BaseTypeCode: -55315191 (xFCB3F509), PrimaryKey: 12345 (x3039), UniformHashCode: 3147747330 (0xBB9ED002)], Full ActivationId: @4f46458324555b06193e625b1958608c0000000000000000]. We have 1 messages to forward.	
+[2015-02-12 03:41:10.745 GMT    14	INFO   	101031	Dispatcher	127.0.0.1:11111]	Trying to forward after Duplicate activation, ForwardCount = 0. Message NewPlacement Request S127.0.0.1:11111:161408215ReminderService@S00000010->S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@9fdeef9d #314: Orleans.Orleans.IReminderTable:ReadRows().	
+[2015-02-12 03:41:12.465 GMT    14	WARNING	101215	Scheduler.Catalog.WorkItemGroup	127.0.0.1:11111]	Task [Id=8, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215Catalog@S0000000e] took elapsed time 0:00:02.3949595 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread/3, ManagedThreadId=14, Executing Task Id=8 Status=RanToCompletion for 00:00:02.3951370>	
+[2015-02-12 03:41:12.875 GMT    24	WARNING	101215	Scheduler.DeploymentLoadPublisherSystemTarge.WorkItemGroup	127.0.0.1:11111]	Task [Id=9, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215DeploymentLoadPublisherSystemTarge@S00000016] took elapsed time 0:00:00.7984812 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread.System/13, ManagedThreadId=24, Executing Task Id=9 Status=RanToCompletion for 00:00:00.7990457>	
+[2015-02-12 03:41:14.212 GMT    24	WARNING	101215	Scheduler.DeploymentLoadPublisherSystemTarge.WorkItemGroup	127.0.0.1:11111]	Task [Id=10, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215DeploymentLoadPublisherSystemTarge@S00000016] took elapsed time 0:00:00.4345989 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread.System/13, ManagedThreadId=24, Executing Task Id=10 Status=RanToCompletion for 00:00:00.4350249>	
+[2015-02-12 03:41:14.213 GMT    14	INFO   	101031	Dispatcher	127.0.0.1:11111]	Trying to forward after Duplicate activation, ForwardCount = 0. Message NewPlacement Request S127.0.0.1:11111:161408215ReminderService@S00000010->S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@25dd5da9 #317: Orleans.Orleans.IReminderTable:ReadRows().	
+[2015-02-12 03:41:14.643 GMT    22	INFO   	100000	GrainBasedReminderTable_S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@136e8892	127.0.0.1:11111]	GrainBasedReminderTable *grn/FCB3F509/00003039 Activated. Full identity: [ActivationAddress: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@136e8892, Full GrainId: [GrainId: *grn/FCB3F509/0000000000000000000000000000303903fffffffcb3f509-0xBB9ED002, IdCategory: Grain, BaseTypeCode: -55315191 (xFCB3F509), PrimaryKey: 12345 (x3039), UniformHashCode: 3147747330 (0xBB9ED002)], Full ActivationId: @491562cdec3bba4b62ef7770136e88920000000000000000]	
+[2015-02-12 03:41:14.914 GMT    14	WARNING	101215	Scheduler.Catalog.WorkItemGroup	127.0.0.1:11111]	Task [Id=11, Status=RanToCompletion] in WorkGroup [SystemTarget: S127.0.0.1:11111:161408215Catalog@S0000000e] took elapsed time 0:00:01.8208059 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread/3, ManagedThreadId=14, Executing Task Id=11 Status=RanToCompletion for 00:00:01.8201041>	
+[2015-02-12 03:41:15.067 GMT    22	WARNING	101215	Scheduler.WorkItemGroup	127.0.0.1:11111]	Task [Id=12, Status=RanToCompletion] in WorkGroup [Activation: S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@136e8892 #GrainType=Orleans.Runtime.ReminderService.GrainBasedReminderTable State=Valid] took elapsed time 0:00:00.8620802 for execution, which is longer than 00:00:00.2000000. Running on thread <Runtime.Scheduler.WorkerPoolThread/11, ManagedThreadId=22, Executing Task Id=12 Status=RanToCompletion for 00:00:00.8620493>	
+[2015-02-12 03:41:15.071 GMT    24	INFO   	101031	Dispatcher	127.0.0.1:11111]	Trying to forward after Duplicate activation, ForwardCount = 0. Message NewPlacement Request S127.0.0.1:11111:161408215ReminderService@S00000010->S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@f64fb5bd #318: Orleans.Orleans.IReminderTable:ReadRows().	
+[2015-02-12 03:41:15.122 GMT    14	INFO   	101031	Dispatcher	127.0.0.1:11111]	Trying to forward after Duplicate activation, ForwardCount = 0. Message NewPlacement Request S127.0.0.1:11111:161408215ReminderService@S00000010->S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@9532e095 #292: Orleans.Orleans.IReminderTable:ReadRows().	
+[2015-02-12 03:41:15.174 GMT    14	INFO   	101031	Dispatcher	127.0.0.1:11111]	Trying to forward after Duplicate activation, ForwardCount = 0. Message NewPlacement Request S127.0.0.1:11111:161408215ReminderService@S00000010->S127.0.0.1:11111:161408215*grn/FCB3F509/00003039@323bacb2 #316: Orleans.Orleans.IReminderTable:ReadRows().	
+[2015-02-12 03:42:06.207 GMT    24	INFO   	600520	Catalog	127.0.0.1:11111]	Log code 100520 occurred 24 additional times in the previous 00:01:00.1204387	
+[2015-02-12 03:42:06.262 GMT    24	INFO   	100507	Catalog	127.0.0.1:11111]	Before collection#6: memory=119MB, #activations=3, collector=<#Activations=2, #Buckets=3, buckets=[0h:0m:-6s.-139ms->0 items, 0h:0m:53s.860ms->1 items, 0h:1m:53s.860ms->1 items]>.	
+[2015-02-12 03:42:06.317 GMT    24	INFO   	100508	Catalog	127.0.0.1:11111]	After collection#6: memory=119MB, #activations=3, collected 0 activations, collector=<#Activations=2, #Buckets=2, buckets=[0h:0m:53s.736ms->1 items, 0h:1m:53s.736ms->1 items]>, collection time=00:00:00.1243720.	
+[2015-02-12 03:42:09.105 GMT    38	INFO   	100704	SiloLogStatistics	127.0.0.1:11111]	Statistics: ^^^
+App.Requests.Latency.Average.Millis=714.000
+App.Requests.LatencyHistogram.Millis=[1.6384:3.2767]=280, [3.2768:6.5535]=8, [6.5536:13.1071]=9, [13.1072:26.2143]=3, [26.2144:52.4287]=31, [52.4288:104.8575]=7, [104.8576:209.7151]=2, [419.4304:838.8607]=1, [1677.7216:3355.4431]=3, [6710.8864:13421.7727]=30, 
+App.Requests.TimedOut.Current=0
+App.Requests.Total.Requests.Current=374
+Catalog.Activation.Collection.NumberOfCollections.Current=6
+Catalog.Activation.Created.Current=33
+Catalog.Activation.CurrentCount=3
+Catalog.Activation.Destroyed.Current=30
+Catalog.Activation.Shutdown.ViaCollection.Current=1
+Catalog.Activation.Shutdown.ViaDeactivateOnIdle.Current=0
+Catalog.Activation.Shutdown.ViaDirectShutdown.Current=0
+Catalog.DuplicateActivations.Current=29
+ConsistentRing.AverageRangePercentage=100.000
+ConsistentRing.MyRange.RingDistance=x100000000
+ConsistentRing.MyRange.RingPercentage=100.000
+ConsistentRing.Ring=[S127.0.0.1:11111:161408215 -> <MultiRange: Size=x100000000, %Ring=100.000%>]
+ConsistentRing.RingSize=1
+Directory.CacheSize=0
+Directory.Lookups.Cache.HitRatio=0, Delta=0
+Directory.Lookups.Cache.Issued.Current=0
+Directory.Lookups.Cache.Successes.Current=0
+Directory.Lookups.Full.Issued.Current=32
+Directory.Lookups.Local.Issued.Current=82
+Directory.Lookups.Local.Successes.Current=50
+Directory.Lookups.LocalDirectory.Issued.Current=114
+Directory.Lookups.LocalDirectory.Successes.Current=50
+Directory.Lookups.Remote.Received.Current=0
+Directory.Lookups.Remote.Sent.Current=0
+Directory.PartitionSize=3
+Directory.Registrations.Issued.Current=0
+Directory.Registrations.Local.Current=0
+Directory.Registrations.Remote.Received.Current=0
+Directory.Registrations.Remote.Sent.Current=0
+Directory.Registrations.SingleAct.Issued.Current=33
+Directory.Registrations.SingleAct.Local.Current=33
+Directory.Registrations.SingleAct.Remote.Received.Current=0
+Directory.Registrations.SingleAct.Remote.Sent.Current=0
+Directory.Ring=[S127.0.0.1:11111:161408215/BB9C2D6E]
+Directory.Ring.MyPortion.AverageRingPercentage=100.000
+Directory.Ring.MyPortion.RingDistance=0
+Directory.Ring.MyPortion.RingPercentage=0.000
+Directory.Ring.MyPredecessors=[]
+Directory.Ring.MySuccessors=[]
+Directory.Ring.RingSize=1
+Directory.UnRegistrations.Issued.Current=0
+Directory.UnRegistrations.Local.Current=1
+Directory.UnRegistrations.Remote.Received.Current=0
+Directory.UnRegistrations.Remote.Sent.Current=0
+Directory.UnRegistrationsMany.Issued.Current=1
+Directory.UnRegistrationsMany.Remote.Received.Current=0
+Directory.UnRegistrationsMany.Remote.Sent.Current=0
+Directory.Validations.Cache.Received.Current=0
+Directory.Validations.Cache.Sent.Current=0
+Dispatcher.NewPlacement.Current=32
+Gateway.ConnectedClients.Current=0
+Gateway.LoadShedding.Current=0
+Gateway.Received.Current=0
+Grain.Dotpay.Actor.Implementations.AtomicIncrement.Current=0
+Grain.Dotpay.Actor.Implementations.RippleToFinancialInstitution.Current=0
+Grain.Dotpay.Actor.Implementations.SystemSetting.Current=0
+Grain.Dotpay.Actor.Implementations.User.Current=0
+Grain.Dotpay.Actor.Service.Implementations.RippleQuoteService.Current=0
+Grain.Dotpay.Actors.Implementations.RippleToFinancialInstitutionListener.Current=1
+Grain.Dotpay.Domain.Implementations.User.Current=0
+Grain.Orleans.EventSourcing.SimpleGrain.BankAccount.Current=0
+Grain.Orleans.EventSourcing.SimpleGrain.TransferTransaction.Current=0
+Grain.Orleans.EventSourcing.SimpleGrain.TransferTransactionProcessManager.Current=0
+Grain.Orleans.Runtime.Management.ManagementGrain.Current=0
+Grain.Orleans.Runtime.MembershipService.GrainBasedMembershipTable.Current=1
+Grain.Orleans.Runtime.ReminderService.GrainBasedReminderTable.Current=1
+Grain.Orleans.Streams.PubSubRendezvousGrain.Current=0
+Grain.OrleansProviders.Storage.MemoryStorageGrain.Current=0
+Membership.ActiveCluster=[S127.0.0.1:11111:161408215]
+Membership.ActiveClusterSize=1
+MessageCenter.ReceiveQueueLength=0
+MessageCenter.SendQueueLength=0
+Messaging.Expired.AtDispatch.Current=0
+Messaging.Expired.AtInvoke.Current=0
+Messaging.Expired.AtReceive.Current=0
+Messaging.Expired.AtRespond.Current=0
+Messaging.Expired.AtSend.Current=0
+Messaging.Processing.ActivationData.All=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Request.Current=0
+Messaging.Processing.Dispatcher.Processed.Errors.Direction.Response.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Request.Current=82
+Messaging.Processing.Dispatcher.Processed.Ok.Direction.Response.Current=2
+Messaging.Processing.Dispatcher.Processed.ReRoute.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Processed.ReRoute.Direction.Request.Current=29
+Messaging.Processing.Dispatcher.Processed.ReRoute.Direction.Response.Current=0
+Messaging.Processing.Dispatcher.Processed.Total.Current=113
+Messaging.Processing.Dispatcher.Received.Direction.OneWay.Current=0
+Messaging.Processing.Dispatcher.Received.Direction.Request.Current=111
+Messaging.Processing.Dispatcher.Received.Direction.Response.Current=2
+Messaging.Processing.Dispatcher.Received.OnActivationContext.Current=79
+Messaging.Processing.Dispatcher.Received.OnNullContext.Current=34
+Messaging.Processing.Dispatcher.Received.Total.Current=113
+Messaging.Processing.IGC.Forwarded.Current=29
+Messaging.Processing.IGC.ReRoute.Current=0
+Messaging.Processing.IGC.Resent.Current=0
+Messaging.Processing.IMA.Enqueued.ToActivationContex.Current=79
+Messaging.Processing.IMA.Enqueued.ToNullContex.Current=34
+Messaging.Processing.IMA.Enqueued.ToSystemTargetContex.Current=664
+Messaging.Processing.IMA.Received.Current=777
+Messaging.Received.BatchSize.PerSocketDirection.GatewayToClient=0.000
+Messaging.Received.BatchSize.PerSocketDirection.SiloToSilo=0.000
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=
+Messaging.Received.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=
+Messaging.Received.Bytes.Header.Current=0
+Messaging.Received.Bytes.Total.Current=0
+Messaging.Received.Direction.OneWay.Current=0
+Messaging.Received.Direction.Request.Current=0
+Messaging.Received.Direction.Response.Current=0
+Messaging.Received.Messages.Total.Current=0
+Messaging.Received.MessageSizeHistogram.Bytes=
+Messaging.Rerouted.OneWay.Current=0
+Messaging.Rerouted.Request.Current=0
+Messaging.Rerouted.Response.Current=0
+Messaging.Sent.BatchSize.PerSocketDirection.GatewayToClient=0.000
+Messaging.Sent.BatchSize.PerSocketDirection.SiloToSilo=0.000
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.GatewayToClient=
+Messaging.Sent.BatchSizeBytesHistogram.Bytes.PerSocketDirection.SiloToSilo=
+Messaging.Sent.Bytes.Header.Current=0
+Messaging.Sent.Bytes.Total.Current=0
+Messaging.Sent.Direction.OneWay.Current=0
+Messaging.Sent.Direction.Request.Current=0
+Messaging.Sent.Direction.Response.Current=0
+Messaging.Sent.LocalMessages.Current=777
+Messaging.Sent.Messages.Total.Current=0
+Messaging.Sent.MessageSizeHistogram.Bytes=
+Networking.Sockets.GatewayToClient.Duplex.Closed.Current=0
+Networking.Sockets.GatewayToClient.Duplex.Opened.Current=0
+Networking.Sockets.Silo.Receiving.Closed.Current=0
+Networking.Sockets.Silo.Receiving.Opened.Current=0
+Networking.Sockets.Silo.Sending.Closed.Current=0
+Networking.Sockets.Silo.Sending.Opened.Current=0
+Queues.QueueSize.Instantaneous.Scheduler.LevelOne=0
+Reminders.AverageTardiness.Seconds=0.007022 Secs
+Reminders.NumberOfActiveReminders=0
+Reminders.TicksDelivered.Current=4
+Runtime.CpuUsage=4.096
+Runtime.DOT.NET.ThreadPool.InUse.CompletionPortThreads=0
+Runtime.DOT.NET.ThreadPool.InUse.WorkerThreads=1
+Runtime.GC.AllocatedBytesInKbPerSec=0.000
+Runtime.GC.GenCollectonCount=gen0=2, gen1=2, gen2=2
+Runtime.GC.GenSizesKb=gen0=282765.90, gen1=7.23, gen2=3349.75
+Runtime.GC.LargeObjectHeapSizeKb=543.645
+Runtime.GC.NumberOfInducedGCs=2.000
+Runtime.GC.PercentOfTimeInGC=24.991
+Runtime.GC.PromotedFinalizationMemoryFromGen0Kb=0.000
+Runtime.GC.PromotedMemoryFromGen1Kb=3337.328
+Runtime.GC.TotalMemoryKb=124192
+Runtime.IsOverloaded=False
+Runtime.Threads.AsynchAgent.Runtime.GrainDirectory.AdaptiveDirectoryCacheMaintainer`1.Current=1
+Runtime.Threads.AsynchAgent.Runtime.Messaging.GatewayAcceptor.Current=0
+Runtime.Threads.AsynchAgent.Runtime.Messaging.GatewayClientCleanupAgent.Current=1
+Runtime.Threads.AsynchAgent.Runtime.Messaging.IncomingMessageAcceptor.Current=0
+Runtime.Threads.AsynchAgent.Runtime.Messaging.IncomingMessageAgent.Current=3
+Runtime.Threads.AsynchAgent.Runtime.Messaging.SiloMessageSender.Current=2
+Runtime.Threads.AsynchAgent.Runtime.Scheduler.WorkerPoolThread.Current=13
+Runtime.Threads.AsynchAgent.Runtime.Watchdog.Current=1
+Runtime.Threads.AsynchAgent.TotalThreadsCreated.Current=23
+Scheduler.NumLongQueueWaitTimes.Current=0
+Scheduler.NumLongRunningTurns.Current=12
+Scheduler.PendingWorkItems.Current=0
+Scheduler.WorkItemGroupCount=13
+Serialization.BufferPool.AllocatedBuffers.Current=250
+Serialization.BufferPool.BuffersInPool=220
+Serialization.BufferPool.CheckedInBuffers.Current=250
+Serialization.BufferPool.CheckedInDroppedBuffers.Current=0
+Serialization.BufferPool.CheckedOutBuffers.Current=280
+Serialization.BufferPool.InUse.AllocatedAndNotInPool_Buffers=30
+Serialization.BufferPool.InUse.CheckedOutAndNotCheckedIn_Buffers=30
+Silo.StartTime=2015-02-12 03:36:55.005 GMT
+Storage.Activate.Errors.Current=0
+Storage.Activate.Total.Current=0
+Storage.Azure.Table.ServerBusy.Current=0
+Storage.Clear.Errors.Current=0
+Storage.Clear.Latency=0 Secs
+Storage.Clear.Total.Current=0
+Storage.Read.Errors.Current=0
+Storage.Read.Latency=0 Secs
+Storage.Read.Total.Current=0
+Storage.Write.Errors.Current=0
+Storage.Write.Latency=0 Secs
+Storage.Write.Total.Current=0
+Watchdog.NumHealthChecks.Current=0
+	
+[2015-02-12 03:43:06.390 GMT    24	INFO   	100507	Catalog	127.0.0.1:11111]	Before collection#7: memory=19MB, #activations=3, collector=<#Activations=2, #Buckets=2, buckets=[0h:0m:-6s.-334ms->1 items, 0h:0m:53s.665ms->1 items]>.	
+[2015-02-12 03:43:06.447 GMT    24	INFO   	100509	Catalog	127.0.0.1:11111]	ShutdownActivationCollector: total 1 to promptly Destroy.	
+[2015-02-12 03:43:06.504 GMT    24	INFO   	100503	Catalog	127.0.0.1:11111]	Starting DestroyActivations #1 of 1 activations	
+[2015-02-12 03:43:06.558 GMT    24	INFO   	100539	Catalog	127.0.0.1:11111]	Done DestroyActivations #1 - Destroyed 1 Activations.	
+[2015-02-12 03:43:06.620 GMT    24	INFO   	100508	Catalog	127.0.0.1:11111]	After collection#7: memory=19MB, #activations=2, collected 1 activations, collector=<#Activations=1, #Buckets=1, buckets=[0h:0m:53s.440ms->1 items]>, collection time=00:00:00.2249759. 
